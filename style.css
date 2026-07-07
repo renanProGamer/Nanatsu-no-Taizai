@@ -1,0 +1,270 @@
+/* ==========================================================================
+   RESET: Zera as margens padrões dos navegadores para evitar espaçamentos tortos
+   ========================================================================== */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Poppins', sans-serif; 
+    background: #111; 
+    color: #fff; 
+    line-height: 1.6; 
+    text-align: center; 
+}
+
+/* ==========================================================================
+   HEADER / HERO (SEÇÃO PRINCIPAL DO TOPO)
+   ========================================================================== */
+.hero{
+    min-height: 100vh; 
+    background:
+        linear-gradient(rgba(0,0,0,.75), rgba(0,0,0,.85)),
+        url("Imagem-de-fundo.jpg") center/cover;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    text-align: center;
+    padding: 40px;
+}
+
+.hero-overlay{
+    max-width: 900px;
+    width: 100%;
+}
+
+.hero h1{
+    font-family: 'Cinzel', serif; 
+    font-size: 4rem; 
+    color: #f4c542; 
+    margin-bottom: 20px;
+    text-shadow: 0 0 15px #a50000; 
+}
+
+.hero p{
+    font-size: 1.2rem;
+    color: #eee;
+    margin-bottom: 30px;
+}
+
+.btn{
+    display: inline-block;
+    padding: 15px 35px;
+    text-decoration: none; 
+    color: #111; 
+    background: #f4c542; 
+    border-radius: 40px; 
+    font-weight: bold;
+    transition: .35s; 
+}
+
+.btn:hover{
+    background: #c62828; 
+    color: white; 
+    transform: translateY(-4px); 
+}
+
+/* ==========================================================================
+   CONTAINER DO VÍDEO DE ABERTURA
+   ========================================================================== */
+.video-abertura-container {
+    max-width: 540px; 
+    margin: 0 auto 30px auto;
+    /* 🌟 ALTERADO: Imagem de fundo adicionada na caixa do vídeo de abertura */
+    background: 
+        linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), 
+        url("Imagem-de-fundo.jpg") center/cover; 
+    padding: 15px;
+    border-radius: 16px;
+    border: 1px solid #f4c542; 
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6); 
+}
+
+.video-title {
+    font-size: 0.85rem;
+    color: #f4c542;
+    margin-bottom: 10px;
+    font-weight: 500;
+    text-transform: uppercase; 
+    letter-spacing: 1px; 
+}
+
+.video-abertura-container video {
+    width: 100%;
+    border-radius: 8px;
+    display: block;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+/* ==========================================================================
+   SEÇÕES GERAIS E CONTAINER DO TRAILER PRINCIPAL
+   ========================================================================== */
+.sobre, .frase, .personagens, .trailer {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto; 
+    padding: 60px 0; 
+}
+
+.sobre h2, .personagens h2, .trailer h2 {
+    font-size: 2.4rem;
+    font-family: 'Cinzel', serif;
+    color: #f4c542;
+    margin-bottom: 40px;
+}
+
+.frase h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 2rem;
+    color: #f4c542;
+    margin-bottom: 15px;
+    font-style: italic; 
+}
+
+/* 🌟 ALTERADO: Caixa do trailer agora também tem a imagem e o mesmo estilo da abertura */
+.video-container {
+    max-width: 840px;
+    margin: auto;
+    background: 
+        linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), 
+        url("Imagem-de-fundo.jpg") center/cover;
+    padding: 20px;
+    border-radius: 20px;
+    border: 1px solid #f4c542;
+    box-shadow: 0 15px 40px rgba(0,0,0,.6);
+}
+
+.video-container video {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9; /* Mantém o formato de cinema sem precisar cortar o fundo */
+    border-radius: 12px;
+    border: none;
+    object-fit: cover; 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+/* ==========================================================================
+   GRID DE PERSONAGENS
+   ========================================================================== */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 290px));
+    gap: 30px; 
+    justify-content: center; 
+    width: 100%;
+}
+
+/* ==========================================================================
+   CARDS INDIVIDUAIS DOS PERSONAGENS
+   ========================================================================== */
+.card{
+    background: #1a1a1a; 
+    border-radius: 18px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column; 
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.card:hover{
+    transform: translateY(-5px); 
+    box-shadow: 0 10px 25px rgba(244, 197, 66, 0.4); 
+}
+
+.card img{
+    width: 100%;
+    height: 320px; 
+    object-fit: cover; 
+    object-position: top center; 
+    display: block;
+    background: #111;
+    transition: transform .4s ease; 
+}
+
+.card:hover img {
+    transform: scale(1.03);
+}
+
+.card-content{
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1; 
+}
+
+.card h3{
+    font-family: 'Cinzel', serif;
+    color: #f4c542;
+    margin-bottom: 5px;
+}
+
+.card span{
+    display: block;
+    color: #d62828; 
+    font-weight: 600;
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+}
+
+.card p{
+    color: #ddd;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+/* ==========================================================================
+   FOOTER (RODAPÉ)
+   ========================================================================== */
+footer{
+    background: #090909; 
+    padding: 30px;
+    border-top: 2px solid #f4c542; 
+    margin-top: 40px;
+}
+
+footer p{
+    color: #ccc;
+}
+
+/* ==========================================================================
+   RESPONSIVIDADE (ADAPTAÇÃO PARA TELAS MENORES / CELULARES)
+   ========================================================================== */
+@media (max-width: 900px){
+    .hero h1{
+        font-size: 3rem; 
+    }
+    .sobre h2, .personagens h2, .trailer h2 {
+        font-size: 2rem; 
+    }
+}
+
+@media (max-width: 600px){
+    .hero{
+        padding: 25px;
+    }
+    .hero h1{
+        font-size: 2.2rem;
+    }
+    .hero p{
+        font-size: 1rem;
+    }
+    .btn{
+        padding: 12px 25px; 
+    }
+    .card img{
+        height: 260px; 
+    }
+    .video-container {
+        padding: 10px; /* Reduz a borda da caixa do trailer no celular */
+    }
+}
